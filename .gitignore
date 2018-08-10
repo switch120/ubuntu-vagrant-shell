@@ -1,3 +1,6 @@
+# Vagrant VM Files
+.vagrant
+
 # Logs
 logs
 *.log
