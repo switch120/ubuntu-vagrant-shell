@@ -53,3 +53,9 @@ Add this line to your **hosts** file. Like many things, this depends on your Ope
 
 * **Mac / Linux** :  sudo nano /etc/hosts
 * **Windows** : Open C:\Windows\System32\Drivers\etc\hosts in Text Editor (**with Admin permission**!)
+
+You can test your Custom Host name (local) resolution with this command in a terminal:
+
+`$ ping hostname.local`
+
+Expected result is a successful ping, NOT a timeout.
