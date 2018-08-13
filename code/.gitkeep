@@ -1,0 +1,5 @@
+This file is generally just empty. There's nothing special about it, but Git 
+won't save an empty foler, so it's common to use an empty .gitkeep file to 
+ensure a particular directory structure is committed with the code.
+
+.gitkeep is not a documented git feature, it's a common workaround.
