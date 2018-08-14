@@ -40,6 +40,8 @@ To exit the VM console, like any other SSH session, use the `exit` command.
 
 Virtualization must be enabled for Vagrant, and some Windows machines will disable this by default. To check this, open Task Manager then click Performance. Near bottom right Virtualization should be enabled. If it is not, this will need to be enabled in the BIOS before Vagrant will function correctly.
 
+> **Note on NPM** - Windows users may need to use the `--no-bin-links` option of npm when installing/updating modules since Windows has some default permission settings that cause errors when creating symlinks. Running **Gitbash** explicitly as an Adminstrator may also help (shift-right click, "Run as Administrator"), but if not you can also open the Group Policy Editor (gpedit.msc) and enabled symlinks for all users under Computer Config -> Windows Settings -> Security Settings -> Local Policies -> User Rights Assignment -> Create Symbolic Links
+
 ## Custom Host Name
 In order to access your VM outside the console, like in a web browser or database management tool, it's easiest to give your VM's `ip address` a **host entry** on your development machine.
 
@@ -58,4 +60,4 @@ You can test your Custom Host name (local) resolution with this command in a ter
 
 `$ ping hostname.local`
 
-Expected result is a successful ping, NOT a timeout.
+Expected result is that the `hostname.local` resolves to the IP address you put in the hosts file. It does not matter if it times out, just that it resolves to the correct IP.
