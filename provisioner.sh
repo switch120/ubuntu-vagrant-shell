@@ -19,3 +19,9 @@ apt-get install -y nodejs
 #allow non-root user to invoke a Node server on ports < 1024
 sudo apt-get install libcap2-bin
 sudo setcap cap_net_bind_service=+ep `readlink -f \`which node\``
+
+#install mySql
+debconf-set-selections <<< 'mysql-server mysql-server/root_password password 1234'
+debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password 1234'
+
+apt-get install -y mysql-server
